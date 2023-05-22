@@ -12,8 +12,8 @@ De sketchnotes is te vinden bij de volgende link:
 - [Week 6: Moderne Web Api](https://keisha-work.notion.site/Week-6-Moderne-web-API-a6bec5c8939b4003bc111d4d16321cdd)
 - [Week 7: Modal Mischief and Dialog Dilemma ](https://keisha-work.notion.site/Week-7-Modal-Mischief-en-Dialog-dilemma-98424957e9cc48f9bc86e01bc9d9c111)
 - [Week 8: 3D  & Three.js](https://keisha-work.notion.site/Week-8-3D-Three-js-f147fb62b1f84b0f8c5b946873a21daf)
-- [Week 9: Next Museum - Foreign Nature]()
+- [Week 9: Next Museum - Foreign Nature](https://keisha-work.notion.site/Week-9-Next-museum-Foreign-Nature-e5c87ca2293c4080b89e3e9256861309)
 ## Artikelen
-1. Artikel 1
-2. Artikel 2
+1. [Fetch Api]()
+2. [GSAP Animatie library]()
 3. Artikel 3
