@@ -40,8 +40,9 @@ Met de fetch APi kun je verschillende methodes gebruiken, namelijk GET, POST, PU
 
 
 ### Body
+De body is een object met de data die je wilt versturen. Meestal is de Body een JSON object. 
 
-
+   
 
 ### Headers
 De Headers object zijn extra metadata die je meestuurt met het verzoek. Die aangeeft wat voor soort data je stuurt. Ook word meestal api key meegegeven. Om de het verzoek te authenticeren. 
@@ -63,12 +64,6 @@ Wanneer de client het antwoordobject ontvangt, kan hij de methode `json()` gebru
 
 Hier kan je een functie schrijven die foutmelding geeft wanneer de data niet opgehaald kan worden. 
 
-
-
-
-
-
-
 ## Hoe ziet een simpele fetch eruit?
 
 ```javascript
@@ -77,7 +72,9 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(json => console.log(json))
 ```
 
-De body is 
+
+
+```javascript
 
 # Bronnen
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)

@@ -1,0 +1,27 @@
+body {
+    height: 300vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15em;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    position: relative;
+}
+
+.box.a{
+    background-color: blue;
+}
+
+.box.b{
+    background-color: green;
+}
+
+.box.c{
+    background-color: yellow;
+}
