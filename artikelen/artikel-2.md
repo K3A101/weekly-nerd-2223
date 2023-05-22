@@ -370,7 +370,30 @@ gsap.to('b',{
 
 ```
 #### Scrub
-Met de scrub eigenschap kan je de animatie vloeiend laten uitvoeren. Je kan de scrub eigenschap op `true` zetten. Maar je kan ook een getal gebruiken. Hoe hoger de getal hoe vloeiender de animatie wordt uitgevoerd. Hiermee wordt de animatie ge
+Met de scrub eigenschap kan je de animatie vloeiend laten uitvoeren. Je kan de scrub eigenschap op `true` zetten. Maar je kan ook een getal gebruiken. Het getal wordt gezien als seconde. Hoe hoger het getal hoe vloeiender de animatie wordt uitgevoerd. Hiermee wordt de animatie gekoppeld aan de scrollbar.
+
+
+
+```javascript 
+gsap.to('b',{
+  
+    scrollTrigger: {
+    trigger: 'b',
+    start: 'top center',
+    end: 'bottom 100px',
+    markers: true,
+    scrub: '1'
+    },
+ 
+    x: 800,
+    duration: 3,
+    rotation: 360,
+})
+
+```
+
+#### ToggleActions
+Met de toggleActions eigenschap kan je bepalen hoe de animatie wordt uitgevoerd, wanneer je van boven en naar beneden scrolt. En andersom. De vier waardes van de toggleActions eigenschap zijn `play`, `pause`, `resume` en `reset`. De eerste waarde is de animatie die wordt uitgevoerd wanneer je van boven naar beneden scrolt. De tweede waarde is de animatie die wordt uitgevoerd wanneer je van beneden naar boven scrolt. De derde waarde is de animatie die wordt uitgevoerd wanneer je van beneden naar boven scrolt. De vierde waarde is de animatie die wordt uitgevoerd wanneer je van boven naar beneden scrolt. De standaard waarde is `play none none none`. 
 
 
 
@@ -384,7 +407,6 @@ gsap.to('b',{
         end: 'bottom 100px',
         markers: true,
         scrub: 1,
-        pin: true,
         toggleActions: 'restart pause reverse pause'
 
     },
