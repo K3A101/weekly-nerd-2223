@@ -417,7 +417,16 @@ gsap.to('b',{
 
 ```
 
-Daarin zet je de trigger, start, end, scrub en pin eigenschappen. De trigger eigenschap is de trigger element. De start en end eigenschappen zijn de begin en eindpunt van de animatie. De scrub eigenschap zorgt ervoor dat de animatie vloeiend wordt uitgevoerd. De pin eigenschap zorgt ervoor dat de animatie wordt vastgezet. 
+## Samenvatting
+
+In dit artikel hebben we geleerd over GSAP, een krachtige JavaScript-animatiebibliotheek. We hebben gezien hoe GSAP kan worden geïnstalleerd via verschillende methoden, zoals CDN, het downloaden van zip-bestanden, NPM, GitHub en CodePen. Vervolgens hebben we geleerd hoe we animaties kunnen maken met GSAP door gebruik te maken van verschillende tween-methoden, zoals gsap.to(), gsap.from(), gsap.fromTo() en gsap.set(). We hebben gezien dat GSAP ons in staat stelt om verschillende elementen te animere,n zoals CSS-eigenschappen, SVG-attributen en zelfs CSS-variabelen.
+
+Daarnaast hebben we enkele handige eigenschappen van GSAP besproken, zoals delay, repeat en yoyo, waarmee we animaties kunnen aanpassen en herhalen. We hebben ook gekeken naar de easing-opties die GSAP biedt om de transitie tussen begin- en eindpunten van animaties te verbeteren.
+
+Ten slotte hebben we een voorbeeld gegeven van het maken van een eenvoudige scroll-animatie met behulp van de GSAP ScrollTrigger-plugin. We hebben gezien hoe we elementen kunnen laten bewegen en roteren terwijl we scrollen, en we hebben besproken hoe de ScrollTrigger-plugin kan worden geïnstalleerd en geactiveerd.
+
+GSAP is een geweldige tool om aantrekkelijke en interactieve animaties op websites te creëren. Met zijn uitgebreide functionaliteit en flexibiliteit biedt GSAP ontwikkelaars de mogelijkheid om hun creatieve visie tot leven te brengen en gebruikers een boeiende ervaring te bieden. Of het nu gaat om het animeren van eenvoudige elementen of het creëren van complexe scroll-animaties, GSAP opent de deur naar eindeloze mogelijkheden.
+
 
 
 ## Bronnen
