@@ -13,7 +13,12 @@ De sketchnotes is te vinden bij de volgende link:
 - [Week 7: Modal Mischief and Dialog Dilemma ](https://keisha-work.notion.site/Week-7-Modal-Mischief-en-Dialog-dilemma-98424957e9cc48f9bc86e01bc9d9c111)
 - [Week 8: 3D  & Three.js](https://keisha-work.notion.site/Week-8-3D-Three-js-f147fb62b1f84b0f8c5b946873a21daf)
 - [Week 9: Next Museum - Foreign Nature](https://keisha-work.notion.site/Week-9-Next-museum-Foreign-Nature-e5c87ca2293c4080b89e3e9256861309)
+- [Week 10: Immersive environment on the web](https://keisha-work.notion.site/Week-10-Immersive-environment-on-the-web-17d0aacf41b846b7a19c412546977c90?pvs=4)
+- [Week 11:Front end setup](https://keisha-work.notion.site/Week-11-Front-end-Setup-van-Triple-9ba43cabee6a469aa4ba448d9aa573be?pvs=4)
+- [Week 12: Building a website like it's 1999](https://keisha-work.notion.site/Week-12-Build-a-website-it-s-1999-8e1b282b79a34782a3555e47ad854561?pvs=4)
+
+---
 ## Artikelen
 1. [Fetch Api]()
 2. [GSAP Animatie library]()
-3. Artikel 3
+3. [Artikel 3]()

@@ -17,10 +17,19 @@ function fetchApi(){
     let html = '';
     pageNumber.addEventListener('input', (e) => {
         e.preventDefault();
-        let page = pageNumber.value;
+        let page = parseInt(pageNumber.value);
         console.log(page);
 
-    fetch(`https://api.disneyapi.dev/character?page=${page}`)
+        if (isNaN(page)) {
+            charactersList.innerHTML = '';
+            return;
+        }
+
+
+    fetch(`https://api.disneyapi.dev/character?page=${page}`,{
+        method: 'GET',
+        mode: 'cors'
+    })
         .then(response => response.json())
         .then(data =>{
             // console.log(data)
@@ -32,20 +41,6 @@ function fetchApi(){
         )
        
     }
-            // let html =  `
-            // <li>
-            //     <h2>${data.data[0].name}</h2>
-
-            //     <img src="${data.data[0].imageUrl}" alt="${data.data[0].name}">
-            // </li>
-            // `
-            // charactersList.insertAdjacentHTML('beforeend', html)
-
-
-
-
-
-
 
 function displayData(data) {
     let html = '';
