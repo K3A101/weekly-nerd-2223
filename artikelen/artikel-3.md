@@ -241,12 +241,14 @@ Uiteindelijk is het mogelijk om met simpel css te nesten. Je hoeft geen framewor
 
 [Codepen Demo](https://codepen.io/keisha-alexander/pen/oNQxamZ?editors=0110)
 
-## 6. Selectmenu
 
 
 ---
 
 ## Conclusie
+
+Kortom hebben we in dit artikel verschillende handige CSS-eigenschappen besproken die je leven als ontwikkelaar een stuk makkelijker kunnen maken.
+Met deze CSS-eigenschappen kun je je websites verrijken en je workflow als ontwikkelaar verbeteren. Het is de moeite waard om met deze technieken te experimenteren en ze toe te passen in je projecten om het maximale uit CSS te halen.
 
 
 ## Bronnen
