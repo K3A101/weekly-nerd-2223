@@ -4,6 +4,15 @@ In deze artikel ga ik vertellen over de nieuwe technieken die ik heb geleerd ove
 ## 1. :has() selector
 :has is een nieuwe psuedo-selector van css. :has() maakt het mogelijlk om te kijken of een parent element een specifieke child element heeft. Als je has wil gebruiken moet je rekening houden dat het  nog niet ondersteund wordt, door de firefox. Hieronder ga ik een voorbeeld geven hoe je :has() selector kan gebruiken. 
 
+```html
+
+
+<article>
+    <h1>Dit is een titel</h1>
+</article>
+
+```
+
 ### Syntax
 ```css
 :has( <relatieve-selectoren>) {
@@ -119,6 +128,12 @@ Om de contaiener queries definieren, moet je de `@container` syntax gebruiken. H
 ```
 Ik heb een simpel demo gemaakt, zodat je een beter beeld krijgt hoe container queries werkt.
 
+<iframe height="800" style="width: 100%;" scrolling="no" title="container queries test" src="https://codepen.io/keisha-alexander/embed/abQNaWR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/keisha-alexander/pen/abQNaWR">
+  container queries test</a> by Keisha (<a href="https://codepen.io/keisha-alexander">@keisha-alexander</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 [Codepen Demo](https://codepen.io/keisha-alexander/pen/abQNaWR)
 
 ## 4. Initial-letter
@@ -148,12 +163,11 @@ p::first-letter {
 }
 
 ```
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJaNBMj" data-user="keisha-alexander" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/keisha-alexander/pen/OJaNBMj">
+<iframe height="500" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/keisha-alexander/embed/OJaNBMj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/keisha-alexander/pen/OJaNBMj">
   Untitled</a> by Keisha (<a href="https://codepen.io/keisha-alexander">@keisha-alexander</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 [Codepen Demo](https://codepen.io/keisha-alexander/pen/OJaNBMj)
 
