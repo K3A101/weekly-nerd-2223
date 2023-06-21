@@ -1,5 +1,7 @@
 # Web Animatie maken met GSAP
 
+Link naar de website: 
+
 ## Inleiding
 Mijn tweede artikel die ik erover gaat schrijven is GSAP. Tijdens een weekly nerd werd er gepraten over GSAP. Ik dacht dat het een interessante onderwerp was om over te schrijven.GSAP is een javascript animatie bibliotheek. Waar je verschillende animatie kan maken met javascript. Er wordt websites gemaakt zodat gebruikers te aan te trekken  om een product te kopen of een artikel te lezen. Animatie is een perfecte tool om gebruikers aan te trekken. Animatie maakt het proces om bepaalde doel te behalen makkelijk, leuker en sneller. En de gebruiker weet wat hij moet doen om zijn doel te behalen.
 
@@ -20,7 +22,6 @@ Er zijn verschillende manieren om GSAP te installeren. Die zijn met:
 De makkelijkste manier om GSAP te installeren is met een CDN. Je kan de CDN link vinden op de greensock website. Je moet alleen een script tag in je html bestand plaatsen. 
 
 ```html
-       
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 ```
 
@@ -28,7 +29,6 @@ De makkelijkste manier om GSAP te installeren is met een CDN. Je kan de CDN link
 Je kan ook de zip bestand downloaden uit de greensock website. Je moet de zip bestand uitpakken en de bestand in je project plaatsen. En de path in de script tag toevoegen. 
 
 ```html
-
 <script src="js/gsap.min.js"></script>
 ```
 
@@ -430,6 +430,6 @@ GSAP is een geweldige tool om aantrekkelijke en interactieve animaties op websit
 
 
 ## Bronnen
-- https://greensock.com/get-started-2/
-- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
-- https://greensock.com/docs/v3/Eases
+- GreenSock. (2022). Getting Started with GSAP - continued. GreenSock. https://greensock.com/get-started-2/
+-SVG Attribute reference - SVG: Scalable Vector Graphics | MDN. (2023, March 7). https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute
+- GreenSock. (n.d.). Docs. https://greensock.com/docs/v3/Eases
