@@ -127,12 +127,8 @@ Om de contaiener queries definieren, moet je de `@container` syntax gebruiken. H
 
 ```
 Ik heb een simpel demo gemaakt, zodat je een beter beeld krijgt hoe container queries werkt.
+![Container queries  demo](../images/container-queries.png)
 
-<iframe height="800" style="width: 100%;" scrolling="no" title="container queries test" src="https://codepen.io/keisha-alexander/embed/abQNaWR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/keisha-alexander/pen/abQNaWR">
-  container queries test</a> by Keisha (<a href="https://codepen.io/keisha-alexander">@keisha-alexander</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
 
 [Codepen Demo](https://codepen.io/keisha-alexander/pen/abQNaWR)
 
@@ -163,11 +159,7 @@ p::first-letter {
 }
 
 ```
-<iframe height="500" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/keisha-alexander/embed/OJaNBMj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/keisha-alexander/pen/OJaNBMj">
-  Untitled</a> by Keisha (<a href="https://codepen.io/keisha-alexander">@keisha-alexander</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+![initial-letter](./../images/initial-letter.png)
 
 [Codepen Demo](https://codepen.io/keisha-alexander/pen/OJaNBMj)
 

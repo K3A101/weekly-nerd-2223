@@ -72,15 +72,17 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(json => console.log(json))
 ```
 ---
-## Fetch API topeassen om een lijst van disney karakters te creeren. 
-De volgende onderdeel van dit artkel ga ik de fetch API topeassen om lijst van disney karakters te genereren. Ik ge 
+De volgende onderdeel van dit artkel ga ik de fetch API topeassen om een lijst van disney karakters te genereren.
+## Fetch API topeassen om een lijst van disney karakters te creëren. 
+
+![Demo screenshot](../images/disney.png)
 Ik ga stap voor stap uitleggen hoe dat moet. 
 
 ### Stap 1: Disney API endpoint
 Wanneer je een applicatie ga maken moet je altijd een passende eindpoint zoeken met de juiste data. Ik heb een Disney API gevonden op Github zelf. Als je de documentatie leest zie je hoe de data is gestructureerd.
 
 ### GET methode
-Deze endpoint heeft een GET methode. Dit betekent dat je alleen data kan ophalen vanuit de server. 
+Deze endpoint heeft een GET methode. Dit betekent dat je alleen data kan ophalen vanuit de server. Hieronder zie je een voorbeeld van de data die je kan ophalen.
 ```
 https://api.disneyapi.dev/character
 ```
@@ -140,10 +142,10 @@ Begin met het maken van een HTML-bestand en het opzetten van de basisstructuur. 
 ```
 
 ### Stap 3: Maak het JavaScript-bestand
-Maak een JavaScript-bestand met de naam "script.js" en link het in het HTML-bestand. Hier schrijven we de code om gegevens op te halen van de API en de DOM te manipuleren.
+Maak een JavaScript-bestand met de naam "script.js" en koppel het in het HTML-bestand. Hier word een functie gesschreven om de data op te halen van de API en de DOM te manipuleren.
 
 ### Stap 4: Haal de API-gegevens op en toon de personages
-Binnen het "script.js" bestand beginnen we met het schrijven van de code om gegevens op te halen van de Disney API. We gebruiken de Fetch API om het verzoek te doen. Voeg de volgende code toe:
+Hier gebruik ik de fetch Api om de data op te halen.
 
 ```javascript
 const charactersList = document.querySelector('#characters');
@@ -182,53 +184,89 @@ mode: 'cors'
 });
 ```
 
-<!-- Zeker! Laten we de code stap voor stap doornemen:
+### Stap 5: De HTML-elementen selecteren
+Waat ik eerst deed is de elementen vanuit de dom seleceren met de`querySelector()` functie. Hiermee pakt ik  karakterslijst en de invoerveld waar je de paginannumer moet invoeren. Ik sla ze allemaal op in een variabele. 
 
-1. `const charactersList = document.querySelector('#characters');`
-   Deze regel zoekt het HTML-element met de ID "characters" en slaat het op in de variabele `charactersList`. Dit element wordt gebruikt om de lijst met personages weer te geven.
 
-2. `const pageNumber = document.querySelector('#page-number');`
-   Deze regel zoekt het HTML-element met de ID "page-number" en slaat het op in de variabele `pageNumber`. Dit element vertegenwoordigt het invoerveld waar de gebruiker het paginanummer invoert.
+```javascript
+const charactersList = document.querySelector('#characters');
+const pageNumber = document.querySelector('#page-number');
+```
 
-3. `pageNumber.addEventListener('input', () => { ... });`
-   Hier wordt een gebeurtenisluisteraar toegevoegd aan het `pageNumber`-element. Het luistert naar het "input" -evenement, wat betekent dat de code binnen de functie wordt uitgevoerd telkens wanneer de gebruiker iets invoert in het invoerveld.
 
-4. `const page = parseInt(pageNumber.value);`
-   Deze regel converteert de waarde van het `pageNumber`-invoerveld naar een geheel getal met behulp van de `parseInt()`-functie. Dit is nodig omdat de API een paginanummer als een getal verwacht.
+### Stap 6: De gebeurtenisluisteraar toevoegen
+Vervolgens heb ik een `eventlistener` gemaakt met de `input` event. Dit betekent wanneer de gebruiker iets invoert in het de tekstveld wordt de data vanuit de Api opgehaald van de Disney API en op het pagina weergegeven.
 
-5. `if (isNaN(page)) { ... }`
-   Hier wordt gecontroleerd of de waarde van `page` geen getal is door `isNaN()` te gebruiken. Als de waarde geen getal is, betekent dit dat de invoer leeg is of geen geldig getal bevat. In dat geval wordt de `charactersList` geleegd en wordt de functie vroegtijdig verlaten.
+De reden waarom ik de pagina nummer moet invoeren is dat de APi is verdeeld met 50 data per pagina. Als je in de url `?page=2` invoert dan krijg je data van de tweede pagina. 
 
-6. `fetch(`https://api.disneyapi.dev/character?page=${page}`, { ... })`
-   Dit is een Fetch API-verzoek naar de Disney API om de gegevens van de personages op te halen. Het paginanummer wordt opgenomen in de URL van het verzoek. Er wordt ook een optie-object doorgegeven met de instellingen voor het verzoek, zoals de HTTP-methode 'GET' en de 'cors'-modus voor Cross-Origin Resource Sharing.
+```javascript
+pageNumber.addEventListener('input', () => {
+ // Hier komt de code
+});
+``` 
 
-7. `.then(response => response.json())`
-   Dit is de eerste `then()`-methode van het Fetch API-verzoek. Het converteert de HTTP-response naar een JavaScript-object in het JSON-formaat.
+### Stap 7: De ingevulde paginanummer ophalen
+Wat ik eerst doe is de ingevulde waarde ophalen en in de `page` variabele opslaan. Ik zorg ervoor dat de waarde een getal wordt in plaats van een string met `parseInt`. Verder ga ik met een if statement checken of de waarde een getal is. Als de waarde  geen getal is dan wordt het karakters lijst leeg gemaakt. 
+```javascript
+const page = parseInt(pageNumber.value);
 
-8. `.then(data => { ... })`
-   Dit is de tweede `then()`-methode van het Fetch API-verzoek. Het ontvangt het geconverteerde JSON-object als de variabele `data`. Hier wordt de `charactersList` geleegd en vervolgens wordt er iteratie uitgevoerd over elk personage in de `data`-array. Voor elk personage wordt er dynamisch HTML gemaakt en toegevoegd aan de `charactersList`.
+  // Wis charactersList wanneer de invoer leeg is of geen getal is
+  if (isNaN(page)) {
+    charactersList.innerHTML = '';
+    return;
+  }
+```
 
-9. `.catch(error => { ... })`
-   Dit blok vangt eventuele fouten op die zich kunnen voordoen tijdens het Fetch API-verzoek. Als er een fout optreedt, wordt de foutmelding weergegeven in de console.
+### Stap 8: Behandel de invoer van de gebruiker en haal API-gegevens op
 
-Deze code zorgt ervoor dat bij elke wijziging in het `pageNumber`-invoerveld de bijbehorende gebeurtenis wordt geactiveerd, waardoor de gegevens van de Disney API worden opgehaald op basis van het ingevoerde paginanummer en de lijst -->
+Wanneer de gebruiker een paginanummer invoert, gaat die mee als een query parameter in de url. De url wordt vervolgens gebruikt in de `fetch()`-functie om de gegevens op te halen. De `fetch()`-functie retourneert een `Promise` die wordt opgelost met een `Response` object. Het `Response` object bevat de gegevens die door de API zijn geretourneerd. De `json()`-methode van het `Response` object retourneert een `Promise` die wordt opgelost met de JSON-gegevens van de API. De JSON-gegevens worden vervolgens gebruikt om de HTML te genereren en in de DOM te plaatsen.
 
- met personages wordt bijgewerkt op basis van de ontvangen gegevens.
+```javascript
+fetch(`https://api.disneyapi.dev/character?page=${page}`,{
+    method: 'GET',
+mode: 'cors'
+  })
+  .then(response => response.json())
+    .then(data => { ...})
+```
 
-### Stap 5: Behandel de invoer van de gebruiker en haal API-gegevens op
-De bovenstaande code stelt een gebeurtenisluisteraar in op het invoerveld om wijzigingen in het paginanummer te detecteren. Wanneer de gebruiker een getal invoert, wordt de gebeurtenisluisteraar geactiveerd en haalt vervolgens de gegevens op van de Disney API op basis van het ingevoerde paginanummer. De API-URL bevat een queryparameter `lang=nl` om de taal in te stellen op Nederlands.
 
-### Stap 6 Werk de HTML bij met de informatie van de personages
-Na ontvangst van de API-reactie doorloopt de code elk personage en genereert dynamisch HTML-elementen. De naam en afbeelding van het personage worden toegevoegd aan de HTML-structuur binnen de `charactersList`-container.
+### Stap 9: Data in de DOM plaatsen
+Na ontvangst van de API data, wordt het door de elk objecten in de array herhaalt  en genereert dynamisch HTML-elementen. Om de html in de DOM zichtbaar te maken, heb ik  `template literals` gebruikt. 
+
+In de template literal wordt er gewone html geschreven. In de html zet ik de data uit de array. Ik haal de naam en de afbeelding van de disney karakters op. Om de html in de DOM te plaatsen, gebruik ik de `insertAdjacentHTML()` methode. Deze methode voegt de opgegeven HTML-string toe aan de DOM op de opgegeven plaats. In dit geval voeg ik de HTML-string toe aan het einde van de lijst met personages.
+
+```javascript
+ let html = '';
+    data.data.forEach(character => {
+        console.log(character.name)
+
+        html = `
+            <li>
+                <h2>${character.name}</h2>
+                <img src="${character.imageUrl}" alt="${character.name}">
+            </li>
+            `;
+
+        charactersList.insertAdjacentHTML('beforeend', html)
+    })
+```
 
 ### Stap 7: Foutafhandeling
 De code bevat een `.catch()`-blok om fouten die zich tijdens het API-verzoek kunnen voordoen af te handelen. Als er een fout optreedt, wordt deze gelogd in de console.
+
+```javascript
+.catch(error => {
+      console.error('Fout:', error);
+    });
+```
 
 Conclusie:
 Door deze stapsgewijze handleiding te volgen, heb je geleerd hoe je de Fetch API kunt gebruiken om gegevens op te halen van een API en een lijst met Disney-personages in het Nederlands kunt genereren. Je hebt nu een functionele applicatie waarmee je Disney-personage-informatie kunt ophalen en weergeven in de gewenste taal. Voel je vrij om de applicatie verder te verbeteren, zoals het toevoegen van paginering of extra functies, afhankelijk van je vereisten.
 
 
 # Bronnen
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-- https://dmitripavlutin.com/fetch-with-json/
-- https://www.educative.io/answers/what-is-the-fetch-api
+- Using the Fetch API - Web APIs | MDN. (2023, April 3). https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+- Pavlutin, D. (2023). How to Use fetch() with JSON. Dmitri Pavlutin Blog. https://dmitripavlutin.com/fetch-with-json/
+- Ijaz, U. (2023). What is the Fetch API? Educative: Interactive Courses for Software Developers. https://www.educative.io/answers/what-is-the-fetch-api
+

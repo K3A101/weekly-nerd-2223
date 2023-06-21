@@ -93,7 +93,7 @@ Je kan bijna alles animeren o.a css propeties, custom object properties, svg att
 ```javascript
 { rotation: 360, x: 10, yPercent: 50 }
 ```
-| CSS transform properties     | GSAP properties |
+| CSS transform eigenschappen     | GSAP eigenschappen |
 | ---------------------------- | --------------- |
 | translateX(100px)            | x: 100          |
 | transform: translateY(100px) | y: 100px        |
@@ -103,7 +103,7 @@ Je kan bijna alles animeren o.a css propeties, custom object properties, svg att
 | transform: scale(2 ,2)       | scale: 2        |
 
 
-### CSS properties
+### CSS eigenschappen animeren
 Met gsap je kan css eigenschappen animeren zoals kleur, transfor, padding border radius enzovoorts
 
 ```javascript
@@ -117,7 +117,7 @@ delay: 1,
 
 
 
-### SVG attributes
+### SVG attributen animeren
 Verder kan je svg atributen animeren in GSAP. De eigenschappen moet geplaats zijn binnen de `attr{}` object. Een voorbeeld van een svg atributen zijn:
 - fill
 - stroke
@@ -143,7 +143,7 @@ gsap.to('.circle', {
 
 
 
-### Speciale properties
+### Speciale eigenschappen
 Er zijn ook speciale properties die je kan gebruiken in GSAP. De speciale properties zijn:
 
 | Properties | Beschrijving                                                                               |
