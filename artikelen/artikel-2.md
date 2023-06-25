@@ -244,7 +244,7 @@ body {
 
 
 
-### Stap 1: Gsap methode gebruiiken
+### Stap 1: Gsap methode gebruiken
 
 Ten eerste moet je de  target en de methode bepalen. De target is degene wat je wilt animeren en dat is de groene blokje. De groene blokje is heeft een class `b`. De methode is de bepaalde begin en eindpunt van de animatie. In dit artikel ga ik de `to()` methode gebruiken. De to methode zorgt ervoor dat de animatie vanaf zijn huidige positie begint en eindigt in een nieuwe positie. 
 

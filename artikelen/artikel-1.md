@@ -231,10 +231,10 @@ mode: 'cors'
 ```
 
 
-### Stap 9: Data in de DOM plaatsen
-Na ontvangst van de API data, wordt het door de elk objecten in de array herhaalt  en genereert dynamisch HTML-elementen. Om de html in de DOM zichtbaar te maken, heb ik  `template literals` gebruikt. 
+### Stap 9: Data in de DOM weergeven
+Na ontvangst van de API data, wordt het door de elk objecten in de array herhaalt met een `forEach()` functie  en genereert dynamisch HTML-elementen. Om de html in de DOM zichtbaar te maken, heb ik  `template literals` gebruikt. 
 
-In de template literal wordt er gewone html geschreven. In de html zet ik de data uit de array. Ik haal de naam en de afbeelding van de disney karakters op. Om de html in de DOM te plaatsen, gebruik ik de `insertAdjacentHTML()` methode. Deze methode voegt de opgegeven HTML-string toe aan de DOM op de opgegeven plaats. In dit geval voeg ik de HTML-string toe aan het einde van de lijst met personages.
+In de template literal kan je html geschreven. In de html zet ik de data uit de array. Ik haal de naam en de afbeelding van de disney karakters op. Om de html in de DOM te plaatsen, gebruik ik de `insertAdjacentHTML()` methode. Deze methode voegt de opgegeven HTML-string toe aan de DOM op de opgegeven plaats. In dit geval voeg ik de HTML-string toe aan het einde van de lijst met personages.
 
 ```javascript
  let html = '';
