@@ -19,6 +19,6 @@ De sketchnotes is te vinden bij de volgende link:
 
 ---
 ## Artikelen
-1. [Fetch Api]()
-2. [GSAP Animatie library]()
-3. [Artikel 3]()
+1. [Fetch Api](https://github.com/K3A101/weekly-nerd-2223/blob/main/artikelen/artikel-1.md)
+2. [GSAP Animatie library](https://github.com/K3A101/weekly-nerd-2223/blob/main/artikelen/artikel-2.md)
+3. [Handige css eigenschappen](https://github.com/K3A101/weekly-nerd-2223/blob/main/artikelen/artikel-3.md)
