@@ -1,15 +1,58 @@
 # Web Animatie maken met GSAP
 
-Link naar de website: 
 
 ## Inleiding
-Mijn tweede artikel die ik erover gaat schrijven is GSAP. Tijdens een weekly nerd werd er gepraten over GSAP. Ik dacht dat het een interessante onderwerp was om over te schrijven.GSAP is een javascript animatie bibliotheek. Waar je verschillende animatie kan maken met javascript. Er wordt websites gemaakt zodat gebruikers te aan te trekken  om een product te kopen of een artikel te lezen. Animatie is een perfecte tool om gebruikers aan te trekken. Animatie maakt het proces om bepaalde doel te behalen makkelijk, leuker en sneller. En de gebruiker weet wat hij moet doen om zijn doel te behalen.
+Mijn tweede artikel die ik erover gaat schrijven is GSAP. Tijdens een van de weekly nerds werd er verteld over GSAP. Ik dacht dat het een interessante onderwerp was om over te schrijven. GSAP is een javascript animatie bibliotheek. Waar je verschillende animatie kan maken met javascript. Er wordt websites gemaakt zodat gebruikers te aan te trekken  om een product te kopen of een artikel te lezen. Animatie is een perfecte tool om gebruikers aan te trekken. Animatie maakt het proces om bepaalde doel te behalen makkelijk, leuker en sneller. En de gebruiker weet wat hij moet doen om zijn doel te behalen.
+
+---
+#  Inhoudsopgave
+- [Web Animatie maken met GSAP](#web-animatie-maken-met-gsap)
+  - [Inleiding](#inleiding)
+- [Inhoudsopgave](#inhoudsopgave)
+  - [Wat is GSAP?](#wat-is-gsap)
+  - [GSAP installeren](#gsap-installeren)
+    - [CDN](#cdn)
+    - [Zip bestand downloaden uit de greensock website](#zip-bestand-downloaden-uit-de-greensock-website)
+    - [Met NPM](#met-npm)
+  - [Hoe wordt GSAP gebruikt?](#hoe-wordt-gsap-gebruikt)
+    - [GSAP tweens](#gsap-tweens)
+    - [Wat kan je animeren met GSAP?](#wat-kan-je-animeren-met-gsap)
+    - [CSS eigenschappen animeren](#css-eigenschappen-animeren)
+    - [SVG attributen animeren](#svg-attributen-animeren)
+    - [Speciale eigenschappen](#speciale-eigenschappen)
+    - [Delay](#delay)
+    - [Animatie herhalen](#animatie-herhalen)
+      - [Repeat](#repeat)
+      - [Yoyo](#yoyo)
+    - [Easing](#easing)
+  - [Hoe maak je een simpel scroll animatie met GSAP.](#hoe-maak-je-een-simpel-scroll-animatie-met-gsap)
+  - [Live demo](#live-demo)
+  - [De animatie maken](#de-animatie-maken)
+    - [HTML en CSS](#html-en-css)
+    - [Stap 1: Gsap methode gebruiken](#stap-1-gsap-methode-gebruiken)
+    - [Stap 2: GSAP eigenschappen toevoegen](#stap-2-gsap-eigenschappen-toevoegen)
+    - [Plugin Installeren](#plugin-installeren)
+    - [Scrolltrigger plugin activeren](#scrolltrigger-plugin-activeren)
+    - [Scrolltrigger plugin toeveoegen aan de animatie](#scrolltrigger-plugin-toeveoegen-aan-de-animatie)
+      - [Trigger](#trigger)
+      - [Start en End](#start-en-end)
+      - [Markers](#markers)
+      - [Scrub](#scrub)
+      - [ToggleActions](#toggleactions)
+  - [Samenvatting](#samenvatting)
+  - [Bronnen](#bronnen)
+
+
+
+---
+
 
 ## Wat is GSAP?
 GSAP oftewel de greensock animation platform is een populaire javascript animatie bibliotheek. Er zijn zoveel functionaliteiten waar je veel met javascript kan animeren. Bijvoorbeeld scroll animatie, animatie van SVG, Three.js of React componenten. 
 
 
 ## GSAP installeren
+Om gsap te gebruiken moet je het eerst installeren. 
 Er zijn verschillende manieren om GSAP te installeren. Die zijn met:
 
 - CDN
@@ -33,7 +76,7 @@ Je kan ook de zip bestand downloaden uit de greensock website. Je moet de zip be
 ```
 
 ### Met NPM
-Je kan ook GSAP installeren met NPM. Je moet eerst de npm installeren. Daarna kan je GSAP installeren met de volgende commando:
+Om met GSAP te installeren met npm moet je eerst de npm installeren. Daarna kan je GSAP installeren met de volgende commando:
 
 ```javascript
 npm install gsap
@@ -44,17 +87,6 @@ Er daarna moet je de importeren in je javascript bestand.
 import { gsap } from "gsap";
 ```
 
-### Op Github
-Je kan ook GSAP downloaden op Github. Je moet de bestand uitpakken en de bestand in je project plaatsen. En de path in de script tag toevoegen. 
-
-```html
-
-<script src="js/gsap.min.js"></script>
-```
-
-### Codepen
-Je kan ook GSAP installeren op Codepen. Je moet de volgende link in de settings plaatsen. 
-
 
 ## Hoe wordt GSAP gebruikt?
 Zoals ik al zij. Met gsap maak je animatie met javascript. Om een simpele animatie te maken heb je de volgende code nodig:
@@ -62,12 +94,12 @@ Zoals ik al zij. Met gsap maak je animatie met javascript. Om een simpele animat
 ```javascript
 gsap.to(".box", {duration: 2, x: 300});
 ```
-Dit is de hele synax van GSAP. Het bestaat uit een methode, de target en de variabelen. De methode is gsap.to. De target is de box. En de variabelen zijn de duration en de x. De duration is de tijd van de animatie. En de x is de positie van de box. 
+Dit is de hele synax van GSAP. Het bestaat uit een methode, de target en de variabelen. De methode is` gsap.to`. De target is de box, dus de element die je wilt animeren. En de variabelen zijn de duration en de x. De duration is de tijd van de animatie. En de x is de positie van de box. 
 
 Er zijn verschillende methodes of tweens die je kan gebruiken. De meest gebruikte methodes zijn:
 
-- gsap.to(): Is het meest gebruikte methode. De `to()` methode begint bij de huidige positie van de target en wordt geanimeerd naar de gedefinieerde waarde in de syntax. En de target gaat naar de nieuwe positie. 
   
+- gsap.to(): Is het meest gebruikte methode. De `to()` methode begint bij de huidige positie van de target en wordt geanimeerd naar de gedefinïeerde waarde in de syntax. En de target gaat naar de nieuwe positie. 
 - gsap.from(): De `from()` methode begint bij de gedefinieerde waarde in de syntax en wordt geanimeerd naar de huidige positie van de target.
 - gsap.fromTo(): Hier defineer je de begin en eind positie van de animatie.
 - gsap.set(): De `set()` methode wordt gebruikt om de target te defineren op bepaalde positie. En de target wordt niet geanimeerd.
@@ -95,12 +127,12 @@ Je kan bijna alles animeren o.a css propeties, custom object properties, svg att
 ```
 | CSS transform eigenschappen     | GSAP eigenschappen |
 | ---------------------------- | --------------- |
-| translateX(100px)            | x: 100          |
-| transform: translateY(100px) | y: 100px        |
-| transform: translateX(50%)   | xPercent: 50    |
+| translateX(50px)            | x: 50          |
+| transform: translateY(20px) | y: 20       |
+| transform: translateX(80%)   | xPercent: 80    |
 | transform: translateY(-50%)  | yPercent: -50   |
 | transform: rotate(360deg)    | rotation: 360   |
-| transform: scale(2 ,2)       | scale: 2        |
+| transform: scale(3 ,3)       | scale: 3        |
 
 
 ### CSS eigenschappen animeren
@@ -108,8 +140,8 @@ Met gsap je kan css eigenschappen animeren zoals kleur, transfor, padding border
 
 ```javascript
 gsap.fromTo('.box', 
-{ x: 0, backgroundColor: 'blue' ,}, 
-{x: 200, backgroundColor: 'red', 
+{ x: 0, backgroundColor: 'crimson' ,}, 
+{x: 200, backgroundColor: 'indigo', 
 duration: 2, 
 delay: 1,
  ease: 'bounce' })
@@ -123,7 +155,6 @@ Verder kan je svg atributen animeren in GSAP. De eigenschappen moet geplaats zij
 - stroke
 - stroke-width
 - path
-- visibility
 - clip
 
 ```javascript
@@ -135,7 +166,6 @@ gsap.to('.circle', {
         stroke: 'blue', 
         strokeWidth: 5, 
         path: 'M 0 0 L 100 100 L 200 0 Z', 
-        visibility: 'hidden', 
         clip: 'rect(0px, 100px, 100px, 0px)' 
     } 
 });
@@ -144,27 +174,26 @@ gsap.to('.circle', {
 
 
 ### Speciale eigenschappen
-Er zijn ook speciale properties die je kan gebruiken in GSAP. De speciale properties zijn:
+Er zijn ook speciale eigenschappen die je kan gebruiken in GSAP. De eigenschappen zijn:
 
-| Properties | Beschrijving                                                                               |
+| Eigenschappen | Beschrijving                                                                               |
 | ---------- | ------------------------------------------------------------------------------------------ |
 | Duration   | Tijdsduur van de animatie                                                                  |
 | delay      | De hoeveelheid vertraging voordat de animatie begint                                       |
 | repeat     | Met repeat bepaal je hoeveel keren de animatie zich herhaalt                               |
-| yoyo       | wanneer het true is gaat de animatie heen en weer afhankelijk hoeveel de animatie herhaalt |
-| stagger    | rotation: 360                                                                              |
+| yoyo       | wanneer het `true` is gaat de animatie heen en weer afhankelijk hoeveel de animatie herhaalt |                                                                             |
 | ease       | Betere transitie tussen het begin en de eindpunt van de animatie.                          |
 | onComplete | Een functie die uitgevoerd wordt wanneer de animatie afgelopen is.                         |
 
 ---
 ### Delay
-Met delay properties kan je de animatie vertragen met een aantal seconden.
+Met de delay eigenschap kan je de animatie vertragen met een aantal seconden.
 ```javascript
 gsap.to('.box', { duration: 2, x: 200, delay: 1 })
 ```
 ### Animatie herhalen
 #### Repeat
-Met repeat properties kan je de animatie herhalen. Je kan een getal plaatsen om aan te geven hoeveel keer de animatie herhaalt moet worden. Als je -1 plaatst wordt de animatie oneindig herhaalt.
+Met repeat eigenschap kan je de animatie herhalen. Je kan een getal plaatsen om aan te geven hoeveel keer de animatie herhaald moet worden. Als je -1 plaatst wordt de animatie oneindig herhaalt.
 ```javascript
 gsap.to('.box', { duration: 2, x: 200, repeat: 2 })
 ```
@@ -193,9 +222,18 @@ Easing is een functie die je kan gebruiken om de transitie tussen het begin en d
 - sine
 - custom
 
+---
+
 ## Hoe maak je een simpel scroll animatie met GSAP. 
 
 GSAP  biedt verschillende plugins om meer functionaliteiten toe te voegen aan de animatie. Een van de plugins de ik ga bespreken is de Scrolltrigger plugins. Met de scrolltrigger plugin wordt de animatie uitgevoerd door te scrollen. Voor dit onderdeel heb ik het zelf geprobeerd en ga mijn bevindingen delen. 
+
+---
+## Live demo
+Ik heb hier een demo gemaakt waar de animatie wordt uitgevoerd door te scrollen. 
+
+Link naar de demo: https://k3a101.github.io/weekly-nerd-2223/toepassingen/gsap/
+
 
 ## De animatie maken
 ### HTML en CSS
@@ -246,7 +284,7 @@ body {
 
 ### Stap 1: Gsap methode gebruiken
 
-Ten eerste moet je de  target en de methode bepalen. De target is degene wat je wilt animeren en dat is de groene blokje. De groene blokje is heeft een class `b`. De methode is de bepaalde begin en eindpunt van de animatie. In dit artikel ga ik de `to()` methode gebruiken. De to methode zorgt ervoor dat de animatie vanaf zijn huidige positie begint en eindigt in een nieuwe positie. 
+Ten eerste moet je de  target en de methode bepalen. De target is de element dat je wilt animeren en dat is de groene blokje. De groene blokje is heeft een class `b`. De methode is de bepaalde begin en eindpunt van de animatie. In dit artikel ga ik de `to()` methode gebruiken. De to methode zorgt ervoor dat de animatie vanaf zijn huidige positie begint en eindigt in een nieuwe positie. 
 
 ```javascript
 gsap.to('b',{})
@@ -260,7 +298,7 @@ gsap.to('b',{
 })
 ```
 
-Ik wil dat de animatie 3 seconden duurt. Ik gebruikt de 
+Ik wil dat de animatie drie seconden duurt. Ik gebruikt de 
 `duration` eigenschap om de duur van de animatie te bepalen. 
 
 ```javascript
@@ -269,7 +307,7 @@ gsap.to('b',{
     duration: 3
 })
 ```
-Terwijl de blokje naar de rechterkant beweegt wil ik dat de blokje ook roteert. Ik ga de `rotation` eigenschap gebruiken om de blokje te laten draaien. 
+Terwijl de blokje naar de rechterkant beweegt wil ik dat de blokje ook draait. Ik ga de `rotation` eigenschap gebruiken om de blokje te laten draaien. 
 
 ```javascript
 gsap.to('b',{
@@ -289,19 +327,19 @@ We gaan vanuit dat je de gsap al had geinstalleerd met behulp van de cdn link. D
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 <script src="JE_JAVASCRIPT_BESTAND"></script>
 ```
-Dus in je html bestand heb je drie script tags. De eerste script tag is de gsap cdn link om gsap te installeren. De tweede script tag is de scrolltrigger plugin cdn link om de scrolltrigger plugin te installeren. De derde script tag is de link naar je javascript bestand. Er  zijn nog meer mogelijkheden om de plugin te installeren op de website. Maar deze is het meest aanbevolen manier.
+Dus in de html bestand heb je drie script tags. De eerste script tag is de gsap cdn link om gsap te installeren. De tweede script tag is de scrolltrigger plugin cdn link om de scrolltrigger plugin te installeren. De derde script tag is de link naar je javascript bestand. Er  zijn nog meer mogelijkheden om de plugin te installeren op de website. Maar deze is het meest aanbevolen manier.
 
 Wanneer je alles hebt geinstalleerd kan je de scrolltrigger plugin gebruiken in je javascript bestand.
 
 ### Scrolltrigger plugin activeren
-Wanneer je de plugin heb geinstalleerd kan je in de plugin toevoegen door de `gsap.registerPlugin(ScrollTrigger)` functie te gebruiken. Hiermee wordt de plugin geactiveerd. De functie ze je in je javascript bestand.
+Wanneer je de plugin heb geinstalleerd kan je in de plugin toevoegen door de `gsap.registerPlugin(ScrollTrigger)` functie te gebruiken. Hiermee wordt de plugin geactiveerd. De functie zet je in de javascript bestand.
 
 ```javascript
 gsap.registerPlugin(ScrollTrigger);
 ```
 
 ### Scrolltrigger plugin toeveoegen aan de animatie
-We gaan de scrolltrigger functie toevoegen aan de aniamtie. Je maakt eerste een `scrolltrigger` object aan.
+We gaan de scrolltrigger functie toevoegen aan de animatie. Je maakt eerste een `scrolltrigger` object aan.
 
 
 ```javascript 
@@ -317,7 +355,7 @@ gsap.to('b',{
 
 ```
 #### Trigger
-In de scrolltrigger zet je de `trigger` eigenschap aan. De waarde is de elemente die je wil animeren door te scrollen. In dit geval is het de groene blokje. De groene blokje heeft een class `b`. Dus de waarde is `b`. 
+In de scrolltrigger zet je de `trigger` eigenschap aan. De waarde is de element die je wil animeren door te scrollen. In dit geval is het de groene blokje. De groene blokje heeft een class `b`. Dus de waarde is `b`. 
 
 ```javascript 
 gsap.to('b', {
@@ -419,7 +457,7 @@ gsap.to('b',{
 
 ## Samenvatting
 
-In dit artikel hebben we geleerd over GSAP, een krachtige JavaScript-animatiebibliotheek. We hebben gezien hoe GSAP kan worden geïnstalleerd via verschillende methoden, zoals CDN, het downloaden van zip-bestanden, NPM, GitHub en CodePen. Vervolgens hebben we geleerd hoe we animaties kunnen maken met GSAP door gebruik te maken van verschillende tween-methoden, zoals gsap.to(), gsap.from(), gsap.fromTo() en gsap.set(). We hebben gezien dat GSAP ons in staat stelt om verschillende elementen te animere,n zoals CSS-eigenschappen, SVG-attributen en zelfs CSS-variabelen.
+In dit artikel hebben we geleerd over GSAP, een krachtige JavaScript-animatiebibliotheek. We hebben gezien hoe GSAP kan worden geïnstalleerd via verschillende methoden, zoals CDN, het downloaden van zip-bestanden, NPM en CodePen. Vervolgens hebben we geleerd hoe we animaties kunnen maken met GSAP door gebruik te maken van verschillende tween-methoden, zoals gsap.to(), gsap.from(), gsap.fromTo() en gsap.set(). We hebben gezien dat GSAP ons in staat stelt om verschillende elementen te animere, zoals CSS-eigenschappen, SVG-attributen en zelfs CSS-variabelen.
 
 Daarnaast hebben we enkele handige eigenschappen van GSAP besproken, zoals delay, repeat en yoyo, waarmee we animaties kunnen aanpassen en herhalen. We hebben ook gekeken naar de easing-opties die GSAP biedt om de transitie tussen begin- en eindpunten van animaties te verbeteren.
 

@@ -1,8 +1,32 @@
 # CSS eigenschappen die je leven makkelijker maakt
-In deze artikel ga ik vertellen over de nieuwe technieken die ik heb geleerd over CSS. CSS is de afkorting van Cascading Style Sheets. CSS is een prograaertaal die wordt gebruikt om de opmaak van een HTML Markup webpagina te beschrijven. CSS heeft veel eigenschappen die je kan gebruiken om je website mooier te maken. Soms heb je wat handige eigenschappen dat je mischien je leven makkelijker maakt.
+In deze artikel ga ik vertellen over de nieuwe technieken die ik heb geleerd over CSS. CSS is de afkorting van Cascading Style Sheets. CSS is een programeertaal die wordt gebruikt om de opmaak van een HTML Markup webpagina te beschrijven. CSS heeft veel eigenschappen die je kan gebruiken om je website mooier te maken. Soms heb je wat handige eigenschappen dat je misschien je leven makkelijker maakt.
+
+---
+# Inhoudsopgave
+
+
+- [CSS eigenschappen die je leven makkelijker maakt](#css-eigenschappen-die-je-leven-makkelijker-maakt)
+- [Inhoudsopgave](#inhoudsopgave)
+  - [1. :has() selector](#1-has-selector)
+    - [Syntax](#syntax)
+    - [Voorbeeld](#voorbeeld)
+  - [2.Scroll Snap](#2scroll-snap)
+    - [syntax](#syntax-1)
+  - [3 Container queries](#3-container-queries)
+    - [Hoe gebruik je container queries?](#hoe-gebruik-je-container-queries)
+    - [Stap 1: Geef de parent container een containment context.](#stap-1-geef-de-parent-container-een-containment-context)
+    - [Stap 2: Container queries toepassen](#stap-2-container-queries-toepassen)
+  - [4. Initial-letter](#4-initial-letter)
+    - [Syntax](#syntax-2)
+  - [5. Nesting](#5-nesting)
+    - [Hoe werkt het?](#hoe-werkt-het)
+  - [Conclusie](#conclusie)
+  - [Bronnen](#bronnen)
+
+---
 
 ## 1. :has() selector
-:has is een nieuwe psuedo-selector van css. :has() maakt het mogelijlk om te kijken of een parent element een specifieke child element heeft. Als je has wil gebruiken moet je rekening houden dat het  nog niet ondersteund wordt, door de firefox. Hieronder ga ik een voorbeeld geven hoe je :has() selector kan gebruiken. 
+:has is een nieuwe psuedo-selector van css. :has() maakt het mogelijlk om te kijken of een parent element een specifieke child element heeft. Als je `has` wil gebruiken moet je rekening houden dat het  nog niet ondersteund wordt, door de firefox. Hieronder ga ik een voorbeeld geven hoe je :has() selector kan gebruiken. 
 
 ```html
 
@@ -65,7 +89,7 @@ Container queries is een nieuwe techniek waar je verandering kan brengen aan een
 ### Hoe gebruik je container queries?
 
 ### Stap 1: Geef de parent container een containment context.
-SHet eerste wat je moet doen, container queries activeren aan de parent container `.card`. Je gebruikt dan de eigenschap `container-type` met de waardes,`inline-size`. Daarna geef je de container een naam met de eigenschap `container-name` met de waarde `card`. De kinderen binnen container `.card` kunnen nu de container queries gebruiken.
+Het eerste wat je moet doen, container queries activeren aan de parent container `.card`. Je gebruikt dan de eigenschap `container-type` met de waardes,`inline-size`. Daarna geef je de container een naam met de eigenschap `container-name` met de waarde `card`. De kinderen binnen container `.card` kunnen nu de container queries gebruiken.
 
 ```html
 <section class="post">

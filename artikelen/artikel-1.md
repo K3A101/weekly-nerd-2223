@@ -1,4 +1,35 @@
 # Fetch Api gebruiken
+Tijdens deze minor heb ik veel geleerd hoe je data vanuit een API of database kan ophalen met de fetch(). Daardoor vond ik het interessant om hier een artikel over te schrijven.
+
+# Inhoudsopgave
+
+- [Fetch Api gebruiken](#fetch-api-gebruiken)
+- [Inhoudsopgave](#inhoudsopgave)
+  - [Fetch API](#fetch-api)
+  - [Parameter van de fetch API](#parameter-van-de-fetch-api)
+    - [Argument 1: De Rest API Endpoint](#argument-1-de-rest-api-endpoint)
+    - [Argument 2:  Options](#argument-2--options)
+    - [Methode](#methode)
+    - [Body](#body)
+    - [Headers](#headers)
+    - [Then/Catch](#thencatch)
+  - [Hoe ziet een simpele fetch eruit?](#hoe-ziet-een-simpele-fetch-eruit)
+- [Fetch API topeassen om een lijst van disney karakters te creëren.](#fetch-api-topeassen-om-een-lijst-van-disney-karakters-te-creëren)
+  - [Live demo:](#live-demo)
+    - [Stap 1: Disney API endpoint](#stap-1-disney-api-endpoint)
+    - [GET methode](#get-methode)
+    - [Stap 2: Opzetten van de HTML-structuur](#stap-2-opzetten-van-de-html-structuur)
+    - [Stap 3: Maak het JavaScript-bestand](#stap-3-maak-het-javascript-bestand)
+    - [Stap 4: Haal de API-gegevens op en toon de personages](#stap-4-haal-de-api-gegevens-op-en-toon-de-personages)
+    - [Stap 5: De HTML-elementen selecteren](#stap-5-de-html-elementen-selecteren)
+    - [Stap 6: De gebeurtenisluisteraar toevoegen](#stap-6-de-gebeurtenisluisteraar-toevoegen)
+    - [Stap 7: De ingevulde paginanummer ophalen](#stap-7-de-ingevulde-paginanummer-ophalen)
+    - [Stap 8: Behandel de invoer van de gebruiker en haal API-gegevens op](#stap-8-behandel-de-invoer-van-de-gebruiker-en-haal-api-gegevens-op)
+    - [Stap 9: Data in de DOM weergeven](#stap-9-data-in-de-dom-weergeven)
+    - [Stap 7: Foutafhandeling](#stap-7-foutafhandeling)
+- [Bronnen](#bronnen)
+
+---
 
 ## Fetch API
 De Fetch API is een moderne vervanging voor XMLHttpRequest. Het is een op beloftes gebaseerde web-API die een responsobject teruggeeft. Het antwoordobject heeft een methode genaamd json() die een belofte teruggeeft. Deze belofte wordt opgelost met de JSON-gegevens uit de respons.
@@ -20,7 +51,7 @@ De tweede argument die de fetch methode kan hebben is een object met opties ofte
 Meestal worden de options opgeslagen in een variabele.
 
 ### Methode 
-Met de fetch APi kun je verschillende methodes gebruiken, namelijk GET, POST, PUT, DELETE. De standaard methode is GET. 
+Met de fetch APi kun je verschillende methodes gebruiken, namelijk GET, POST, PUT, DELETE. 
     
 ```javascript
     fetch('https://jsonplaceholder.typicode.com/todos/1', {
@@ -72,8 +103,13 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(json => console.log(json))
 ```
 ---
+# Fetch API topeassen om een lijst van disney karakters te creëren. 
 De volgende onderdeel van dit artkel ga ik de fetch API topeassen om een lijst van disney karakters te genereren.
-## Fetch API topeassen om een lijst van disney karakters te creëren. 
+
+## Live demo:
+Hier is een demo van de applicatie die ik heb gemaakt.
+- Link naar de demo: https://k3a101.github.io/weekly-nerd-2223/toepassingen/fetch/
+
 
 ![Demo screenshot](../images/disney.png)
 Ik ga stap voor stap uitleggen hoe dat moet. 
@@ -269,4 +305,4 @@ Door deze stapsgewijze handleiding te volgen, heb je geleerd hoe je de Fetch API
 - Using the Fetch API - Web APIs | MDN. (2023, April 3). https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 - Pavlutin, D. (2023). How to Use fetch() with JSON. Dmitri Pavlutin Blog. https://dmitripavlutin.com/fetch-with-json/
 - Ijaz, U. (2023). What is the Fetch API? Educative: Interactive Courses for Software Developers. https://www.educative.io/answers/what-is-the-fetch-api
-
+- Documentation. (n.d.). Disney API. https://disneyapi.dev/docs/
